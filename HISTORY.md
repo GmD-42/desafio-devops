@@ -12,3 +12,7 @@ Criar pipeline que atualiza imagen no ECR quando repo for atualizado
 
 Ao termino da pipeline fazer uma Release para atualizar a aplicação
 
+## Monitoramento :black_square_button:
+Adicionar Grafana e prometheus no docker compose
+
+Configurar dashboards de monitoramento no Grafana
