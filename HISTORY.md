@@ -1,7 +1,7 @@
 ## 1 :white_check_mark:
     rodar api.py localmente para entender como funciona a aplicação 
-## 2 :black_square_button:
-    atualizar aplicação para rodar em conteiner 
+## 2 :white_check_mark:
+    atualizar aplicação para rodar em container docker 
 
 
 ## Esteira de atualização  :black_square_button:
