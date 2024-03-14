@@ -1,12 +1,12 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
-
+from prometheus_flask_exporter import PrometheusMetrics
 
 app_name = 'comentarios'
 app = Flask(app_name)
 app.debug = True
-
+metrics = PrometheusMetrics(app)
 comments = {}
 
 
