@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+## Api python-flask
+  python-flask:
+    build:
+      context: "./"
+      dockerfile: "./app/Dockerfile"
+    container_name: backend
+    restart: always
+    ports:
+      - "8000:8000"

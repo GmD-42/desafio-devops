@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+## Api python-flask
+  python-flask:
+    image: ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/api-lab:latest
+    container_name: backend
+    restart: always
+    ports:
+      - "8000:8000"
+### ----------------------------------------------------------- ###
+## Prometheus
+  prometheus:
+    image: prom/prometheus:v2.50.1
+    container_name: prometheus
+    restart: always
+    volumes:
+      - ./prometheus/config.yaml:/etc/prometheus/prometheus.yaml
+    ports:
+      - 9090:9090     
+### ----------------------------------------------------------- ###
+## Grafana
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: grafana
+    restart: always
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana_storage:/var/lib/grafana
+### ----------------------------------------------------------- ###
+
+## Volumes
+volumes:
+  grafana_storage: {}
