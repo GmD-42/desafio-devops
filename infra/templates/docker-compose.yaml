@@ -2,7 +2,7 @@ version: "3.9"
 services:
 ## Api python-flask
   python-flask:
-    image: ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/api-lab:latest
+    image: ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/api:latest
     container_name: backend
     restart: always
     ports:
@@ -24,8 +24,8 @@ services:
     container_name: grafana
     restart: always
     environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
     ports:
       - 3000:3000
     volumes:

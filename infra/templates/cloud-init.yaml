@@ -6,7 +6,7 @@ users:
     sudo: [ "ALL=(ALL) NOPASSWD:ALL" ]
     shell: /bin/bash
     ssh-authorized-keys: 
-        - shh-key
+        - ${ssh-key}
 
 ## copiar docker-compose.yml e deploy.sh para a pasta Documents
 write_files:
@@ -21,6 +21,12 @@ write_files:
     owner: gdardengo:gdardengo
     path: /local/script/deploy.sh
     permissions: '755'
+
+  - encoding: b64
+    content: ${B64_PROMETHEUS_CONFIG}
+    owner: root:root
+    path: /local/api/prometheus/config.yaml
+    permissions: '0644'
   
 runcmd:
 ## instalando o docker ce:
