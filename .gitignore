@@ -46,3 +46,5 @@ terraform.rc
 
 #lista de usuarios e chaves ssh
 *.user
+
+docker-compose-local.yaml

@@ -2,9 +2,9 @@ FROM python:3.7.4
 
 WORKDIR /app
 
-COPY /app/requirements.txt /app
+COPY requirements.txt /app
 
-COPY /app/api.py /app/api.py 
+COPY api.py /app/api.py 
 
 RUN pip install -r /app/requirements.txt
 
