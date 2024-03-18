@@ -1,38 +1,40 @@
-## Neste documento será listado o passa a passo em ordem cronologia de como foi desenvolvido o projeto
+# Projeto Desafio Globo: Passo a Passo
 
-## 1º Passo Teste, e git :white_check_mark:
-Criar repositório no git hub. &check;
+Este documento detalha o cronograma do desenvolvimento do projeto, listando as etapas concluídas e as próximas a serem executadas.
 
-Rodar api.py localmente para entender como funciona a aplicação. &check; 
+## 1º Passo: Teste e Git ✅
 
-## 2º Passo Docker :white_check_mark:
-Atualizar aplicação para rodar em container docker. &check;
+- Criar repositório no GitHub. ✅
+- Executar `api.py` localmente para compreender o funcionamento da aplicação. ✅
 
-## 3º Passo Instalar stack de Monitoramento :black_square_button:
-Adicionar Grafana e Prometheus no docker compose. &check;
+## 2º Passo: Docker ✅
 
-## 4º Passo Configurar AWS :white_check_mark:
-Configurar conta na aws. &check;
+- Atualizar a aplicação para ser executada em um contêiner Docker. ✅
 
-Criar usuário de acesso no IAM, e configurar permissões. &check;
+## 3º Passo: Instalar Stack de Monitoramento ✅
 
-Configurar o [aws-vault](https://github.com/99designs/aws-vault) utilizando as chaves do usuário criado, para utilizar no terraform. &check;
+- Adicionar Grafana e Prometheus no `docker-compose`. ✅
 
-Criar bucket no s3 para guardar o terraform.state. &check; 
+## 4º Passo: Configurar AWS ✅
 
-Criar repositório no ECR. &check;
+- Configurar conta na AWS. ✅
+- Criar usuário de acesso no IAM e configurar permissões. ✅
+- Configurar o [aws-vault](https://github.com/99designs/aws-vault) utilizando as chaves do usuário criado para utilização no Terraform. ✅
+- Criar bucket no S3 para guardar o `terraform.state`. ✅
+- Criar repositório no ECR. ✅
+- Fazer push da imagem da primeira versão da API para o repositório criado no ECR. ✅
 
-Fazer push da imagem da primeira versão da api para o repositório criado no ECR. &check;
+## 5º Passo: Infraestrutura como Código (IaC) ✅
 
-## 5º Passo IaC :black_square_button:
-Iniciar projeto Terraform. &check;
+- Iniciar projeto Terraform. ✅
+- Executar o `terraform apply` do projeto e realizar testes de funcionalidade. ✅
 
-Fazer o terraform apply do projeto, e fazer testes de funcionalidade &check;
+## 6º Passo: Configurar Dashboards ☑️
 
-## 6º Passo Configurar Dashboards :black_square_button:
-Configurar dashboards de monitoramento no Grafana.
+- Configurar dashboards de monitoramento no Grafana.
 
-## 7º Passo Esteira de atualização CI/CD  :black_square_button:
-Criar pipeline que atualiza imagem no ECR quando repo for atualizado
+## 7º Passo: Esteira de Atualização CI/CD ☑️
 
-Ao termino da pipeline fazer uma Release para atualizar a aplicação
+- Criar pipeline que atualiza a imagem no ECR quando o repositório for atualizado.
+- Após a conclusão da pipeline, fazer um release para atualizar a aplicação. 
+
