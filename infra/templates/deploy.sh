@@ -4,4 +4,4 @@
 
     sudo docker pull ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/api:latest
 
-    sudo docker compose up -d
+    sudo docker compose -f /local/api/docker-compose.yaml up -d

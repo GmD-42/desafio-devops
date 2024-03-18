@@ -8,7 +8,7 @@ users:
     ssh-authorized-keys: 
         - ${ssh-key}
 
-## copiar docker-compose.yml e deploy.sh para a pasta Documents
+## copiar docker-compose.yml, deploy.sh  e prometheus config para a pasta Documents
 write_files:
   - encoding: b64
     content: ${B64_DOCKER_COMPOSE}
@@ -18,9 +18,9 @@ write_files:
   
   - encoding: b64
     content: ${B64_DEPLOY}
-    owner: gdardengo:gdardengo
-    path: /local/script/deploy.sh
-    permissions: '755'
+    owner: root:root
+    path: /local/deploy.sh
+    permissions: '0755'
 
   - encoding: b64
     content: ${B64_PROMETHEUS_CONFIG}
