@@ -1,7 +1,7 @@
 version: "3.9"
 services:
 ## Api python-flask
-  python-flask:
+  backend:
     image: ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/api:latest
     container_name: backend
     restart: always
@@ -14,7 +14,7 @@ services:
     container_name: prometheus
     restart: always
     volumes:
-      - ./prometheus/config.yaml:/etc/prometheus/prometheus.yaml
+      - ./prometheus/config.yaml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090     
 ### ----------------------------------------------------------- ###
