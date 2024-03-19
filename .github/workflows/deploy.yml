@@ -4,6 +4,7 @@ on:
     workflows: ["Deploy api.py App to ECR"]
     types:
       - completed
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
