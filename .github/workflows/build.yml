@@ -5,7 +5,8 @@ on:
     branches: # the branch to be deployed
       - 'main'
     paths:
-      - 'app/**' 
+      - 'app/**'
+  workflow_dispatch:
 defaults:
   run:
     working-directory: app   
