@@ -1,7 +1,7 @@
 name: Run deploy.sh in EC2 
 on:
   workflow_run:
-    workflows: ["Run deploy.sh in EC2 "]
+    workflows: ["Deploy api.py App to ECR"]
     types:
       - completed
   workflow_dispatch:
