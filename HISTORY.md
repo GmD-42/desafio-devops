@@ -19,7 +19,7 @@ Comentário: Utilizar contêineres Docker é uma prática comum para garantir qu
 
 - Adicionar Grafana e Prometheus no `docker-compose`. ✅
 
-Comentário: Monitorar o desempenho e a integridade da aplicação são essenciais para garantir sua confiabilidade. Para o monitoramento, optei por utilizar o Grafana e Prometheus, pois ambas são ferramentas populares para monitoramento, e oferem recursos robustos para visualização e coleta de métricas.
+Comentário: Monitorar o desempenho e a integridade da aplicação são essenciais para garantir sua confiabilidade. Para o monitoramento, optei por utilizar o Grafana e Prometheus, pois ambas são ferramentas populares para monitoramento, e oferecem recursos robustos para visualização e coleta de métricas.
 
 ## 4º Passo: Configurar AWS ✅
 
