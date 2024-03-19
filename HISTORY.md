@@ -19,7 +19,7 @@ Comentário: Utilizar contêineres Docker é uma prática comum para garantir qu
 
 - Adicionar Grafana e Prometheus no `docker-compose`. ✅
 
-Comentário: Monitorar o desempenho e a integridade da aplicação é essencial para garantir sua confiabilidade. Grafana e Prometheus são ferramentas populares para monitoramento, oferecendo recursos robustos para visualização e coleta de métricas.
+Comentário: Monitorar o desempenho e a integridade da aplicação são essenciais para garantir sua confiabilidade. Para o monitoramento, optei por utilizar o Grafana e Prometheus, pois ambas são ferramentas populares para monitoramento, e oferem recursos robustos para visualização e coleta de métricas.
 
 ## 4º Passo: Configurar AWS ✅
 
@@ -37,7 +37,7 @@ Comentário: Para este projeto, optei por utilizar a AWS para hospedar a aplica�
 - Iniciar projeto Terraform. ✅
 - Executar o `terraform apply` do projeto e realizar testes de funcionalidade. ✅
 
-Comentário: Adotar a infraestrutura como código simplifica a implantação e a manutenção do ambiente de produção. O Terraform é uma ferramenta popular para gerenciar a infraestrutura de forma automatizada e previsível.
+Comentário: Optar pela infraestrutura como código simplifica tanto a implantação quanto a manutenção do ambiente de produção. Nesse sentido, escolhi utilizar o Terraform, que é amplamente reconhecido como a ferramenta líder de mercado nessa área. Com o Terraform, é possível gerenciar a infraestrutura de forma automatizada e previsível. Sua sintaxe simplificada permite provisionar a infraestrutura em data centers multicloud e locais, facilitando a criação, destruição e manutenção de projetos. Essa abordagem proporciona uma maneira eficiente e consistente de gerenciar a infraestrutura, garantindo a escalabilidade e confiabilidade do ambiente de produção.
 
 ## 6º Passo: Configurar Dashboards ✅
 
