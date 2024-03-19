@@ -18,5 +18,7 @@ jobs:
         ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}
 
     - name: SSH into EC2 and run deploy script
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
-        ssh -o StrictHostKeyChecking=no -i ${{secrets.SSH_PRIVATE_KEY}} github@${{ secrets.EC2_PUBLIC_IP }} 'bash /local/deploy.sh'
+        ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY github@${{ secrets.EC2_PUBLIC_IP }} 'bash /local/deploy.sh'
